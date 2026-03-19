@@ -28,7 +28,7 @@ heading-map:
 از نظر ریاضی، یک بردار $\mathbf{v} \in \mathbb{R}^n$ را می‌توان به صورت زیر نمایش داد:
 
 $$
-\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
+\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix} \in \mathbb{R}^n
 $$
 
 بیایید برخی بردارها را در پایتون ایجاد و تجسم کنیم:
@@ -71,7 +71,7 @@ plt.show()
 مجموع دو بردار $\mathbf{u}$ و $\mathbf{v}$ به صورت مؤلفه‌ای تعریف می‌شود:
 
 ```{math}
-\mathbf{u} + \mathbf{v} = \begin{bmatrix} u_1 + v_1 \\ u_2 + v_2 \\ \vdots \\ u_n + v_n \end{bmatrix}
+\mathbf{u} + \mathbf{v} = \begin{bmatrix} u_1 + v_1 \\ u_2 + v_2 \\ \vdots \\ u_n + v_n \end{bmatrix} \in \mathbb{R}^n
 ```
 
 ## عملیات ماتریسی
@@ -86,7 +86,7 @@ a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{bmatrix}
+\end{bmatrix} \in \mathbb{R}^{m \times n}
 $$
 
 ضرب ماتریسی به ما امکان می‌دهد تبدیل‌های خطی را ترکیب کنیم. برای ماتریس‌های $A$ و $B$، حاصل‌ضرب $AB$ نشان‌دهنده اعمال تبدیل $B$ و سپس تبدیل $A$ است.
@@ -133,7 +133,7 @@ print(np.round(total_output, 2))
 
 ```{math}
 :label: eigenvalue-equation
-Av = \lambda v
+A\mathbf{v} = \lambda \mathbf{v}, \quad \mathbf{v} \neq \mathbf{0}
 ```
 
 که در آن $\lambda$ مقدار ویژه است. این معادله بنیادی در سراسر اقتصاد، از نظریه رشد تا تحلیل پایداری، ظاهر می‌شود.
@@ -141,7 +141,7 @@ Av = \lambda v
 برای یک ماتریس $n \times n$ به نام $A$، چندجمله‌ای مشخصه عبارت است از:
 
 $$
-\det(A - \lambda I) = 0
+\det(A - \lambda I) = 0, \quad \lambda \in \mathbb{C}
 $$
 
 حل این معادله مقادیر ویژه را به دست می‌دهد. بیایید مقادیر ویژه را برای یک ماتریس انتقال محاسبه کنیم:
@@ -179,5 +179,5 @@ print(f"بیکار: {steady_state[1]:.2%}")
 روش تکرار توانی را می‌توان برای یافتن مقدار ویژه غالب استفاده کرد:
 
 $$
-\lambda_1 = \lim_{k \to \infty} \frac{\|A^k \mathbf{v}_0\|}{\|A^{k-1} \mathbf{v}_0\|}
+\lambda_1 = \lim_{k \to \infty} \frac{\|A^k \mathbf{v}_0\|}{\|A^{k-1} \mathbf{v}_0\|}, \quad \mathbf{v}_0 \neq \mathbf{0}
 $$
