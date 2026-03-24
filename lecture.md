@@ -8,7 +8,7 @@ kernelspec:
   language: python
   name: python3
 heading-map:
-  Linear Algebra Foundations: مبانی جبر خطی
+  '{index}`Linear Algebra` Foundations': '{index}`Linear Algebra` مبانی جبر خطی'
   Vector Spaces: فضاهای برداری
   Vector Spaces::Basic Properties: ویژگی‌های اساسی
   Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
@@ -17,7 +17,15 @@ heading-map:
   Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
 ---
 
-# مبانی جبر خطی
+(linear-algebra)=
+
+```{raw} jupyter
+<div id="qe-notebook-header" style="text-align:right;">
+        <a href="https://quantecon.org/lectures/">Lectures</a>
+</div>
+```
+
+# {index}`Linear Algebra` مبانی جبر خطی
 
 این درس مفاهیم بنیادی جبر خطی را که برای اقتصاد کمی ضروری هستند معرفی می‌کند. فضاهای برداری، ماتریس‌ها و کاربردهای آن‌ها در مسائل اقتصادی را بررسی خواهیم کرد.
 
@@ -129,7 +137,7 @@ print(np.round(total_output, 2))
 
 ## مقادیر ویژه و بردارهای ویژه
 
-مقادیر ویژه و بردارهای ویژه ویژگی‌های مهم تبدیل‌های خطی را آشکار می‌سازند. یک بردار ویژه $v$ از ماتریس $A$ رابطه زیر را برآورده می‌کند:
+مقادیر ویژه و بردارهای ویژه ویژگی‌های ساختاری مهم تبدیل‌های خطی را آشکار می‌سازند که برای تحلیل پایداری حیاتی هستند. یک بردار ویژه $v$ از ماتریس $A$ رابطه زیر را برآورده می‌کند:
 
 ```{math}
 :label: eigenvalue-equation
