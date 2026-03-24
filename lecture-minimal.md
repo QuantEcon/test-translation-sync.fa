@@ -8,12 +8,12 @@ kernelspec:
   language: python
   name: python3
 heading-map:
-  Introduction to Economics: مقدمه‌ای بر اقتصاد
+  Principles of Economic Analysis: اصول تحلیل اقتصادی
   Supply and Demand: عرضه و تقاضا
   Economic Models: مدل‌های اقتصادی
 ---
 
-# مقدمه‌ای بر اقتصاد
+# اصول تحلیل اقتصادی
 
 این سند مقدمه‌ای پایه بر اصول اقتصادی ارائه می‌دهد. ما مفاهیم بنیادینی را بررسی خواهیم کرد که پایه و اساس تحلیل اقتصادی را تشکیل می‌دهند.
 
