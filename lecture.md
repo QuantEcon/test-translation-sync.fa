@@ -37,11 +37,11 @@ $$
 import numpy as np
 import matplotlib.pyplot as plt
 
-# ایجاد دو بردار
+# ایجاد دو بردار نمونه برای نمایش
 v1 = np.array([2, 3])
 v2 = np.array([1, 4])
 
-# تجسم بردارها
+# ایجاد تجسم بردار
 fig, ax = plt.subplots(figsize=(8, 6))
 ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='blue', label='v1')
 ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='red', label='v2')
@@ -49,7 +49,7 @@ ax.set_xlim(-1, 5)
 ax.set_ylim(-1, 5)
 ax.set_xlabel('محور x')
 ax.set_ylabel('محور y')
-ax.set_title('نمایش بردار در فضای دوبعدی')
+ax.set_title('تجسم بردار در فضای اقلیدسی دوبعدی')
 ax.legend()
 ax.grid(True)
 plt.show()
@@ -112,7 +112,7 @@ total_output = leontief_inverse @ final_demand
 
 print("ماتریس داده-ستانده:")
 print(input_output)
-print("\nمعکوس لئونتیف:")
+print("\nماتریس معکوس لئونتیف:")
 print(np.round(leontief_inverse, 3))
 print("\nتولید کل مورد نیاز (میلیارد):")
 print(np.round(total_output, 2))
