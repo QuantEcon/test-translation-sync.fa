@@ -11,7 +11,6 @@ heading-map:
   Linear Algebra Foundations: مبانی جبر خطی
   Vector Spaces: فضاهای برداری
   Vector Spaces::Basic Properties: ویژگی‌های اساسی
-  Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
   Matrix Operations: عملیات ماتریسی
   Matrix Operations::Applications in Economics: کاربردها در اقتصاد
   Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
@@ -63,10 +62,6 @@ plt.show()
 - وجود معکوس‌های جمعی
 
 این ویژگی‌ها تضمین می‌کنند که فضاهای برداری تحت عملیات ریاضی رفتاری قابل پیش‌بینی دارند.
-
-#### کاربردها در اقتصاد
-
-ویژگی‌های فضای برداری در مدل‌سازی اقتصادی بنیادی هستند. ویژگی بسته بودن تضمین می‌کند که ترکیب‌های تخصیص‌های امکان‌پذیر، امکان‌پذیر باقی می‌مانند، در حالی که وجود معکوس‌ها به ما امکان می‌دهد بدهی‌ها و تعهدات را مدل‌سازی کنیم.
 
 مجموع دو بردار $\mathbf{u}$ و $\mathbf{v}$ به صورت مؤلفه‌ای تعریف می‌شود:
 
