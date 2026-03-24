@@ -8,176 +8,145 @@ kernelspec:
   language: python
   name: python3
 heading-map:
-  Linear Algebra Foundations: مبانی جبر خطی
-  Vector Spaces: فضاهای برداری
-  Vector Spaces::Basic Properties: ویژگی‌های اساسی
-  Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
-  Matrix Operations: عملیات ماتریسی
-  Matrix Operations::Applications in Economics: کاربردها در اقتصاد
-  Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
+  Programming for Economics: برنامه‌نویسی برای اقتصاد
+  Using `numpy` Arrays: استفاده از آرایه‌های `numpy`
+  Using `numpy` Arrays::Creating Arrays with `np.arange()` and `np.linspace()`: ایجاد آرایه‌ها با `np.arange()` و `np.linspace()`
+  Working with **Pandas DataFrames**: کار با **DataFrames** در **Pandas**
+  'Working with **Pandas DataFrames**::Reading Data: `pd.read_csv()` vs `pd.read_excel()`': 'خواندن داده: `pd.read_csv()` در مقابل `pd.read_excel()`'
+  '*Matplotlib* Visualization Basics': مبانی تجسم داده با *Matplotlib*
+  '*Matplotlib* Visualization Basics::The `plt.plot()` Function': تابع `plt.plot()`
+  Using [QuantEcon](https://quantecon.org) Libraries: استفاده از کتابخانه‌های [QuantEcon](https://quantecon.org)
+  Using [QuantEcon](https://quantecon.org) Libraries::Installing `quantecon` Package: نصب بسته `quantecon`
+  'Special Cases: $\LaTeX$ in Headings': 'موارد خاص: $\LaTeX$ در عنوان‌ها'
+  'Special Cases: $\LaTeX$ in Headings::The $\beta$-Coefficient in Regression': ضریب $\beta$ در رگرسیون
+  'Special Cases: $\LaTeX$ in Headings::Computing $\mathbb{E}[X]$ (Expected Values)': محاسبه $\mathbb{E}[X]$ (مقادیر مورد انتظار)
+  Questions & Answers: پرسش و پاسخ
+  '"Edge Cases" and [Special] {Characters}': '"موارد استثنایی" و [ویژه] {کاراکترها}'
+  '"Edge Cases" and [Special] {Characters}::Using `matplotlib`''s `plt.subplot()` for Multiple Plots': استفاده از `matplotlib`'s `plt.subplot()` برای چندین نمودار
+  Summary: خلاصه
 ---
 
-# مبانی جبر خطی
+# برنامه‌نویسی برای اقتصاد
 
-این درس مفاهیم بنیادی جبر خطی را که برای اقتصاد کمی ضروری هستند معرفی می‌کند. فضاهای برداری، ماتریس‌ها و کاربردهای آن‌ها در مسائل اقتصادی را بررسی خواهیم کرد.
+این درس مفاهیم برنامه‌نویسی و ابزارهای ضروری برای تحلیل اقتصادی مدرن را پوشش می‌دهد.
 
-## فضاهای برداری
+## استفاده از آرایه‌های `numpy`
 
-فضای برداری مجموعه‌ای از اشیاء به نام بردار است که می‌توان آن‌ها را با هم جمع کرد و در اسکالرها ضرب نمود. درک فضاهای برداری برای تحلیل اقتصادی مدرن ضروری است.
+کتابخانه `numpy` عملیات آرایه‌ای کارآمد برای محاسبات عددی فراهم می‌کند. آرایه‌ها پایه و اساس محاسبات علمی در Python هستند.
 
-از نظر ریاضی، یک بردار $\mathbf{v} \in \mathbb{R}^n$ را می‌توان به صورت زیر نمایش داد:
+آرایه‌های NumPy از عملیات برداری‌سازی پشتیبانی می‌کنند و از حلقه‌های کند Python اجتناب می‌نمایند:
 
-$$
-\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
-$$
-
-بیایید برخی بردارها را در پایتون ایجاد و تجسم کنیم:
-
-```{code-cell} python
+```python
 import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+result = arr ** 2  # Vectorized squaring
+```
+
+### ایجاد آرایه‌ها با `np.arange()` و `np.linspace()`
+
+روش‌های مختلف ایجاد آرایه اهداف متفاوتی را دنبال می‌کنند. تابع `np.arange()` آرایه‌هایی با اندازه گام مشخص ایجاد می‌کند:
+
+```python
+x = np.arange(0, 10, 0.5)  # From 0 to 10, step 0.5
+```
+
+در همین حال، `np.linspace()` آرایه‌هایی با تعداد نقاط مشخص ایجاد می‌کند:
+
+```python
+y = np.linspace(0, 1, 100)  # 100 points from 0 to 1
+```
+
+## کار با **DataFrames** در **Pandas**
+
+کتابخانه **pandas** قابلیت‌های قدرتمندی برای دستکاری داده فراهم می‌کند. DataFrameها ساختارهای داده دوبعدی با برچسب هستند.
+
+### خواندن داده: `pd.read_csv()` در مقابل `pd.read_excel()`
+
+فرمت‌های مختلف فایل به توابع خواندن متفاوتی نیاز دارند:
+
+- **فایل‌های CSV**: از `pd.read_csv('data.csv')` استفاده کنید
+- **فایل‌های Excel**: از `pd.read_excel('data.xlsx')` استفاده کنید
+- **فایل‌های JSON**: از `pd.read_json('data.json')` استفاده کنید
+
+## مبانی تجسم داده با *Matplotlib*
+
+*Matplotlib* کتابخانه پایه رسم نمودار برای Python است. این کتابخانه کنترل دقیقی بر ظاهر نمودار فراهم می‌کند.
+
+### تابع `plt.plot()`
+
+نمودارهای خطی ساده با `plt.plot(x, y)` ایجاد می‌شوند:
+
+```python
 import matplotlib.pyplot as plt
-
-# ایجاد دو بردار
-v1 = np.array([2, 3])
-v2 = np.array([1, 4])
-
-# تجسم بردارها
-fig, ax = plt.subplots(figsize=(8, 6))
-ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='blue', label='v1')
-ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='red', label='v2')
-ax.set_xlim(-1, 5)
-ax.set_ylim(-1, 5)
-ax.set_xlabel('محور x')
-ax.set_ylabel('محور y')
-ax.set_title('نمایش بردار در فضای دوبعدی')
-ax.legend()
-ax.grid(True)
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.title('Simple Plot')
 plt.show()
 ```
 
-### ویژگی‌های اساسی
+## استفاده از کتابخانه‌های [QuantEcon](https://quantecon.org)
 
-فضاهای برداری چند ویژگی کلیدی را برآورده می‌سازند:
-- بسته بودن نسبت به جمع و ضرب اسکالری
-- وجود هویت جمعی (بردار صفر)
-- وجود معکوس‌های جمعی
+پروژه [QuantEcon](https://quantecon.org) ابزارهای تخصصی برای مدل‌سازی اقتصادی فراهم می‌کند. برای جزئیات بیشتر به [مستندات](https://quanteconpy.readthedocs.io/) مراجعه کنید.
 
-این ویژگی‌ها تضمین می‌کنند که فضاهای برداری تحت عملیات ریاضی رفتاری قابل پیش‌بینی دارند.
+### نصب بسته `quantecon`
 
-#### کاربردها در اقتصاد
+نصب از طریق pip:
 
-ویژگی‌های فضای برداری در مدل‌سازی اقتصادی بنیادی هستند. ویژگی بسته بودن تضمین می‌کند که ترکیب‌های تخصیص‌های امکان‌پذیر، امکان‌پذیر باقی می‌مانند، در حالی که وجود معکوس‌ها به ما امکان می‌دهد بدهی‌ها و تعهدات را مدل‌سازی کنیم.
-
-مجموع دو بردار $\mathbf{u}$ و $\mathbf{v}$ به صورت مؤلفه‌ای تعریف می‌شود:
-
-```{math}
-\mathbf{u} + \mathbf{v} = \begin{bmatrix} u_1 + v_1 \\ u_2 + v_2 \\ \vdots \\ u_n + v_n \end{bmatrix}
+```bash
+pip install quantecon
 ```
 
-## عملیات ماتریسی
+یا با conda:
 
-ماتریس‌ها آرایه‌های مستطیلی از اعداد هستند که تبدیل‌های خطی را نمایش می‌دهند. آن‌ها ابزارهای بنیادی در مدل‌سازی اقتصادی و تحلیل داده هستند.
-
-یک ماتریس کلی $m \times n$ دارای شکل زیر است:
-
-$$
-A = \begin{bmatrix}
-a_{11} & a_{12} & \cdots & a_{1n} \\
-a_{21} & a_{22} & \cdots & a_{2n} \\
-\vdots & \vdots & \ddots & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{bmatrix}
-$$
-
-ضرب ماتریسی به ما امکان می‌دهد تبدیل‌های خطی را ترکیب کنیم. برای ماتریس‌های $A$ و $B$، حاصل‌ضرب $AB$ نشان‌دهنده اعمال تبدیل $B$ و سپس تبدیل $A$ است.
-
-بیایید عملیات ماتریسی را با یک کاربرد اقتصادی نشان دهیم:
-
-```{code-cell} python
-# ایجاد یک ماتریس داده-ستانده ساده برای یک اقتصاد سه‌بخشی
-# بخش‌ها: کشاورزی، تولید، خدمات
-input_output = np.array([
-    [0.2, 0.3, 0.1],  # نهاده‌های کشاورزی
-    [0.3, 0.2, 0.2],  # نهاده‌های تولید
-    [0.1, 0.2, 0.3]   # نهاده‌های خدمات
-])
-
-# بردار تقاضای نهایی (به میلیارد)
-final_demand = np.array([100, 150, 200])
-
-# محاسبه تولید کل با استفاده از معکوس لئونتیف: x = (I - A)^{-1} * d
-I = np.eye(3)
-leontief_inverse = np.linalg.inv(I - input_output)
-total_output = leontief_inverse @ final_demand
-
-print("ماتریس داده-ستانده:")
-print(input_output)
-print("\nمعکوس لئونتیف:")
-print(np.round(leontief_inverse, 3))
-print("\nتولید کل مورد نیاز (میلیارد):")
-print(np.round(total_output, 2))
+```bash
+conda install -c conda-forge quantecon
 ```
 
-### کاربردها در اقتصاد
+## موارد خاص: $\LaTeX$ در عنوان‌ها
 
-مدل‌های اقتصادی اغلب از ماتریس‌ها برای نمایش موارد زیر استفاده می‌کنند:
-- روابط داده-ستانده در تولید
-- احتمالات انتقال در زنجیره‌های مارکوف
-- ماتریس‌های ضریب در سیستم‌های معادلات خطی
+نمادگذاری ریاضی به صورت درون‌خطی ظاهر می‌شود: $f(x) = x^2 + 2x + 1$.
 
-معکوس لئونتیف $(I - A)^{-1}$ از اهمیت ویژه‌ای برخوردار است، که در آن $I$ ماتریس همانی و $A$ ماتریس ضرایب داده-ستانده است.
+### ضریب $\beta$ در رگرسیون
 
-## مقادیر ویژه و بردارهای ویژه
+ضریب رگرسیون $\beta$ رابطه بین متغیرها را اندازه‌گیری می‌کند:
 
-مقادیر ویژه و بردارهای ویژه ویژگی‌های مهم تبدیل‌های خطی را آشکار می‌سازند. یک بردار ویژه $v$ از ماتریس $A$ رابطه زیر را برآورده می‌کند:
+$$
+y = \alpha + \beta x + \epsilon
+$$
 
-```{math}
-:label: eigenvalue-equation
-Av = \lambda v
+### محاسبه $\mathbb{E}[X]$ (مقادیر مورد انتظار)
+
+مقادیر مورد انتظار $\mathbb{E}[X]$ نمایانگر نتایج میانگین هستند:
+
+$$
+\mathbb{E}[X] = \sum_{i} x_i P(X = x_i)
+$$
+
+## پرسش و پاسخ
+
+پرسش‌های متداول درباره Python برای اقتصاد:
+
+- **پ**: کدام سریع‌تر است: `numpy` یا Python ساده؟
+- **پ**: `numpy` معمولاً برای عملیات عددی ۱۰ تا ۱۰۰ برابر سریع‌تر است
+
+- **پ**: آیا می‌توانم از `pandas` با مجموعه داده‌های بزرگ استفاده کنم؟
+- **پ**: بله، اما برای مجموعه داده‌هایی که بزرگ‌تر از RAM هستند، استفاده از `dask` را در نظر بگیرید
+
+## "موارد استثنایی" و [ویژه] {کاراکترها}
+
+این بخش کاراکترهای ویژه مختلف را در عناوین آزمایش می‌کند.
+
+### استفاده از `matplotlib`'s `plt.subplot()` برای چندین نمودار
+
+تابع subplot چندین نمودار را در یک شکل ایجاد می‌کند:
+
+```python
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+ax1.plot(x, y1)
+ax2.plot(x, y2)
 ```
 
-که در آن $\lambda$ مقدار ویژه است. این معادله بنیادی در سراسر اقتصاد، از نظریه رشد تا تحلیل پایداری، ظاهر می‌شود.
+## خلاصه
 
-برای یک ماتریس $n \times n$ به نام $A$، چندجمله‌ای مشخصه عبارت است از:
-
-$$
-\det(A - \lambda I) = 0
-$$
-
-حل این معادله مقادیر ویژه را به دست می‌دهد. بیایید مقادیر ویژه را برای یک ماتریس انتقال محاسبه کنیم:
-
-```{code-cell} python
-# ایجاد یک ماتریس انتقال برای یک زنجیره مارکوف ساده
-# حالات: شاغل، بیکار
-transition_matrix = np.array([
-    [0.95, 0.05],  # شاغل -> (شاغل، بیکار)
-    [0.20, 0.80]   # بیکار -> (شاغل، بیکار)
-])
-
-# محاسبه مقادیر ویژه و بردارهای ویژه
-eigenvalues, eigenvectors = np.linalg.eig(transition_matrix)
-
-print("ماتریس انتقال:")
-print(transition_matrix)
-print("\nمقادیر ویژه:")
-print(np.round(eigenvalues, 4))
-print("\nبردارهای ویژه:")
-print(np.round(eigenvectors, 4))
-
-# بردار ویژه متناظر با مقدار ویژه 1 توزیع حالت پایدار را می‌دهد
-steady_state_index = np.argmax(eigenvalues)
-steady_state = eigenvectors[:, steady_state_index]
-steady_state = steady_state / steady_state.sum()  # نرمال‌سازی
-
-print("\nتوزیع حالت پایدار:")
-print(f"شاغل: {steady_state[0]:.2%}")
-print(f"بیکار: {steady_state[1]:.2%}")
-```
-
-این مفاهیم برای تحلیل سیستم‌های اقتصادی پویا، مانند مدل‌های رشد و تحلیل پایداری، ضروری هستند.
-
-روش تکرار توانی را می‌توان برای یافتن مقدار ویژه غالب استفاده کرد:
-
-$$
-\lambda_1 = \lim_{k \to \infty} \frac{\|A^k \mathbf{v}_0\|}{\|A^{k-1} \mathbf{v}_0\|}
-$$
+ابزارهای برنامه‌نویسی مانند **numpy**، *pandas* و `matplotlib` برای پژوهش اقتصادی مدرن ضروری هستند. تسلط بر این کتابخانه‌ها امکان تحلیل کارآمد داده‌ها و تجسم نتایج را فراهم می‌سازد.
