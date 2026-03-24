@@ -9,12 +9,12 @@ kernelspec:
   name: python3
 heading-map:
   Linear Algebra Foundations: مبانی جبر خطی
-  Vector Spaces: فضاهای برداری
-  Vector Spaces::Basic Properties: ویژگی‌های اساسی
-  Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
-  Matrix Operations: عملیات ماتریسی
-  Matrix Operations::Applications in Economics: کاربردها در اقتصاد
-  Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
+  Vector spaces: فضاهای برداری
+  Vector spaces::Basic properties: ویژگی‌های اساسی
+  Vector spaces::Basic properties::Applications in economics: کاربردها در اقتصاد
+  Matrix operations: عملیات ماتریسی
+  Matrix operations::Applications in economics: کاربردها در اقتصاد
+  Eigenvalues and eigenvectors: مقادیر ویژه و بردارهای ویژه
 ---
 
 # مبانی جبر خطی
@@ -136,7 +136,7 @@ print(np.round(total_output, 2))
 Av = \lambda v
 ```
 
-که در آن $\lambda$ مقدار ویژه است. این معادله بنیادی در سراسر اقتصاد، از نظریه رشد تا تحلیل پایداری، ظاهر می‌شود.
+که در آن $\lambda$ مقدار ویژه است. این معادله بنیادی در سراسر اقتصاد، از نظریه رشد تا تحلیل پایداری سیستم‌های پویا، ظاهر می‌شود.
 
 برای یک ماتریس $n \times n$ به نام $A$، چندجمله‌ای مشخصه عبارت است از:
 
