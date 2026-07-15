@@ -7,14 +7,15 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
-heading-map:
-  Linear Algebra Foundations: مبانی جبر خطی
-  Vector Spaces: فضاهای برداری
-  Vector Spaces::Basic Properties: ویژگی‌های اساسی
-  Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
-  Matrix Operations: عملیات ماتریسی
-  Matrix Operations::Applications in Economics: کاربردها در اقتصاد
-  Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
+translation:
+  title: مبانی جبر خطی
+  headings:
+    Vector Spaces: فضاهای برداری
+    Vector Spaces::Basic Properties: ویژگی‌های اساسی
+    Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
+    Matrix Operations: عملیات ماتریسی
+    Matrix Operations::Applications in Economics: کاربردها در اقتصاد
+    Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
 ---
 
 # مبانی جبر خطی
@@ -57,12 +58,14 @@ plt.show()
 
 ### ویژگی‌های اساسی
 
-فضاهای برداری چند ویژگی کلیدی را برآورده می‌سازند:
+فضاهای برداری چند اصل بنیادی را برآورده می‌سازند که ساختار جبری آن‌ها را تعریف می‌کنند:
 - بسته بودن نسبت به جمع و ضرب اسکالری
 - وجود هویت جمعی (بردار صفر)
 - وجود معکوس‌های جمعی
+- شرکت‌پذیری و جابه‌جایی‌پذیری جمع
+- ویژگی‌های توزیع‌پذیری که جمع و ضرب اسکالری را به هم پیوند می‌دهند
 
-این ویژگی‌ها تضمین می‌کنند که فضاهای برداری تحت عملیات ریاضی رفتاری قابل پیش‌بینی دارند.
+این اصول تضمین می‌کنند که فضاهای برداری تحت عملیات ریاضی رفتاری قابل پیش‌بینی دارند و همین امر آن‌ها را برای نمایش مجموعه‌های انتخاب اقتصادی و مجموعه‌های محدودیت در مسائل بهینه‌سازی ایده‌آل می‌سازد.
 
 #### کاربردها در اقتصاد
 
