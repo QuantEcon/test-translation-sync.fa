@@ -7,14 +7,16 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
-heading-map:
-  Linear Algebra Foundations: مبانی جبر خطی
-  Vector Spaces: فضاهای برداری
-  Vector Spaces::Basic Properties: ویژگی‌های اساسی
-  Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
-  Matrix Operations: عملیات ماتریسی
-  Matrix Operations::Applications in Economics: کاربردها در اقتصاد
-  Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
+translation:
+  title: مبانی جبر خطی
+  headings:
+    Vector Spaces: فضاهای برداری
+    Vector Spaces::Basic Properties: ویژگی‌های اساسی
+    Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
+    Vector Spaces::Basic Properties::Closure Property: ویژگی بسته بودن
+    Matrix Operations: عملیات ماتریسی
+    Matrix Operations::Applications in Economics: کاربردها در اقتصاد
+    Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
 ---
 
 # مبانی جبر خطی
@@ -67,6 +69,18 @@ plt.show()
 #### کاربردها در اقتصاد
 
 ویژگی‌های فضای برداری در مدل‌سازی اقتصادی بنیادی هستند. ویژگی بسته بودن تضمین می‌کند که ترکیب‌های تخصیص‌های امکان‌پذیر، امکان‌پذیر باقی می‌مانند، در حالی که وجود معکوس‌ها به ما امکان می‌دهد بدهی‌ها و تعهدات را مدل‌سازی کنیم.
+
+#### ویژگی بسته بودن
+
+ویژگی بسته بودن به‌ویژه برای کاربردهای اقتصادی اهمیت دارد. این ویژگی تضمین می‌کند که ترکیب بسته‌های مصرفی یا برنامه‌های تولید امکان‌پذیر، به نتیجه‌ای دیگر و امکان‌پذیر منتهی می‌شود.
+
+به‌طور صوری، برای هر بردار $\mathbf{u}, \mathbf{v} \in V$ و اسکالرهای $\alpha, \beta \in \mathbb{R}$:
+
+$$
+\alpha \mathbf{u} + \beta \mathbf{v} \in V
+$$
+
+این ویژگی تضمین می‌کند که ترکیب‌های محدب نقاط در فضا باقی می‌مانند، که برای مسائل بهینه‌سازی در اقتصاد ضروری است.
 
 مجموع دو بردار $\mathbf{u}$ و $\mathbf{v}$ به صورت مؤلفه‌ای تعریف می‌شود:
 
