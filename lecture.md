@@ -8,177 +8,175 @@ kernelspec:
   language: python
   name: python3
 translation:
-  title: مبانی جبر خطی
+  title: سیستم‌های اقتصادی سلسله‌مراتبی
   headings:
-    Vector Spaces: فضاهای برداری
-    Vector Spaces::Basic Properties: ویژگی‌های اساسی
-    Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
-    Matrix Operations: عملیات ماتریسی
-    Matrix Operations::Applications in Economics: کاربردها در اقتصاد
-    Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
+    International Trade: تجارت بین‌الملل
+    International Trade::Regional Trade Agreements: توافق‌نامه‌های تجاری منطقه‌ای
+    International Trade::Regional Trade Agreements::Implementation Mechanisms: سازوکارهای اجرا
+    International Trade::Regional Trade Agreements::Implementation Mechanisms::Dispute Resolution Procedures: رویه‌های حل اختلاف
+    International Trade::Regional Trade Agreements::Implementation Mechanisms::Dispute Resolution Procedures::Arbitration Panels: هیئت‌های داوری
+    International Trade::Regional Trade Agreements::Implementation Mechanisms::Dispute Resolution Procedures::Appeals Process: فرایند تجدیدنظر
+    International Trade::Regional Trade Agreements::Implementation Mechanisms::Enforcement Mechanisms: سازوکارهای اجرایی
+    International Trade::Regional Trade Agreements::Harmonization Standards: استانداردهای هماهنگ‌سازی
+    International Trade::Regional Trade Agreements::Harmonization Standards::Product Safety Regulations: مقررات ایمنی محصول
+    International Trade::Regional Trade Agreements::Harmonization Standards::Environmental Standards: استانداردهای زیست‌محیطی
+    International Trade::Bilateral Trade Relationships: روابط تجاری دوجانبه
+    Monetary Policy Hierarchy: سلسله‌مراتب سیاست پولی
+    Monetary Policy Hierarchy::Policy Committee Structure: ساختار کمیته سیاست‌گذاری
+    Monetary Policy Hierarchy::Policy Committee Structure::Voting Procedures: رویه‌های رأی‌گیری
+    Monetary Policy Hierarchy::Policy Committee Structure::Voting Procedures::Dissenting Opinions: نظرات مخالف
+    Monetary Policy Hierarchy::Policy Committee Structure::Voting Procedures::Consensus Building: شکل‌گیری اجماع
+    Monetary Policy Hierarchy::Policy Committee Structure::Information Flow: جریان اطلاعات
+    Monetary Policy Hierarchy::Implementation Channels: کانال‌های اجرا
+    Monetary Policy Hierarchy::Implementation Channels::Open Market Operations: عملیات بازار باز
+    Monetary Policy Hierarchy::Implementation Channels::Open Market Operations::Primary Dealers: معامله‌گران اصلی
+    Monetary Policy Hierarchy::Implementation Channels::Open Market Operations::Primary Dealers::Auction Mechanisms: سازوکارهای حراج
+    Monetary Policy Hierarchy::Implementation Channels::Open Market Operations::Primary Dealers::Settlement Procedures: رویه‌های تسویه
+    Monetary Policy Hierarchy::Implementation Channels::Open Market Operations::Reserve Requirements: الزامات ذخیره
+    Fiscal Policy Coordination: هماهنگی سیاست مالی
+    Fiscal Policy Coordination::National Budget Process: فرایند بودجه ملی
+    Fiscal Policy Coordination::National Budget Process::Revenue Collection: جمع‌آوری درآمد
+    Fiscal Policy Coordination::National Budget Process::Revenue Collection::Income Tax Administration: اداره مالیات بر درآمد
+    Fiscal Policy Coordination::National Budget Process::Revenue Collection::Income Tax Administration::Audit Selection Criteria: معیارهای انتخاب حسابرسی
+    Fiscal Policy Coordination::National Budget Process::Revenue Collection::Income Tax Administration::Penalty Structures: ساختارهای جریمه
+    Fiscal Policy Coordination::National Budget Process::Revenue Collection::Corporate Tax Compliance: انطباق مالیات شرکتی
+    Fiscal Policy Coordination::National Budget Process::Expenditure Allocation: تخصیص مخارج
+    Fiscal Policy Coordination::Intergovernmental Transfers: انتقالات میان‌دولتی
+    Summary: خلاصه
 ---
 
-# مبانی جبر خطی
+# سیستم‌های اقتصادی سلسله‌مراتبی
 
-این درس مفاهیم بنیادی جبر خطی را که برای اقتصاد کمی ضروری هستند معرفی می‌کند. فضاهای برداری، ماتریس‌ها و کاربردهای آن‌ها در مسائل اقتصادی را بررسی خواهیم کرد.
+این درس ساختارهای سلسله‌مراتبی در سیستم‌های اقتصادی را بررسی می‌کند و چارچوب‌های سازمانی و تحلیلی عمیق را نشان می‌دهد.
 
-## فضاهای برداری
+## تجارت بین‌الملل
 
-فضای برداری مجموعه‌ای از اشیاء به نام بردار است که می‌توان آن‌ها را با هم جمع کرد و در اسکالرها ضرب نمود. درک فضاهای برداری برای تحلیل اقتصادی مدرن ضروری است.
+تجارت بین‌الملل شامل لایه‌های متعددی از تصمیم‌گیری است، از شرکت‌های منفرد گرفته تا دولت‌های ملی و سازمان‌های بین‌المللی.
 
-از نظر ریاضی، یک بردار $\mathbf{v} \in \mathbb{R}^n$ را می‌توان به صورت زیر نمایش داد:
+### توافق‌نامه‌های تجاری منطقه‌ای
 
-$$
-\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
-$$
+توافق‌نامه‌های تجاری منطقه‌ای مانند NAFTA و اتحادیه اروپا ساختارهای حکمرانی چندسطحی پیچیده‌ای ایجاد می‌کنند.
 
-بیایید برخی بردارها را در پایتون ایجاد و تجسم کنیم:
+#### سازوکارهای اجرا
 
-```{code-cell} python
-import numpy as np
-import matplotlib.pyplot as plt
+هر توافق‌نامه تجاری به سازوکارهای اجرایی خاصی نیاز دارد تا رعایت مقررات را تضمین کرده و اختلافات را حل کند.
 
-# ایجاد دو بردار
-v1 = np.array([2, 3])
-v2 = np.array([1, 4])
+##### رویه‌های حل اختلاف
 
-# تجسم بردارها
-fig, ax = plt.subplots(figsize=(8, 6))
-ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='blue', label='v1')
-ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='red', label='v2')
-ax.set_xlim(-1, 5)
-ax.set_ylim(-1, 5)
-ax.set_xlabel('محور x')
-ax.set_ylabel('محور y')
-ax.set_title('نمایش بردار در فضای دوبعدی')
-ax.legend()
-ax.grid(True)
-plt.show()
-```
+رویه‌های رسمی برای حل اختلافات تجاری میان کشورهای عضو وجود دارد.
 
-### ویژگی‌های اساسی
+###### هیئت‌های داوری
 
-فضاهای برداری چند ویژگی کلیدی را برآورده می‌سازند:
-- بسته بودن نسبت به جمع و ضرب اسکالری
-- وجود هویت جمعی (بردار صفر)
-- وجود معکوس‌های جمعی
+هیئت‌های داوری متشکل از کارشناسان حقوق تجارت هستند که ادعاها را ارزیابی کرده و احکام الزام‌آوری درباره تخلفات تجاری صادر می‌کنند.
 
-این ویژگی‌ها تضمین می‌کنند که فضاهای برداری تحت عملیات ریاضی رفتاری قابل پیش‌بینی دارند.
+###### فرایند تجدیدنظر
 
-#### کاربردها در اقتصاد
+فرایند تجدیدنظر به طرفین اجازه می‌دهد احکام اولیه را به چالش بکشند، که این امر انصاف در حل اختلافات را تضمین می‌کند.
 
-ویژگی‌های فضای برداری در مدل‌سازی اقتصادی بنیادی هستند. ویژگی بسته بودن تضمین می‌کند که ترکیب‌های تخصیص‌های امکان‌پذیر، امکان‌پذیر باقی می‌مانند، در حالی که وجود معکوس‌ها به ما امکان می‌دهد بدهی‌ها و تعهدات را مدل‌سازی کنیم.
+##### سازوکارهای اجرایی
 
-مجموع دو بردار $\mathbf{u}$ و $\mathbf{v}$ به صورت مؤلفه‌ای تعریف می‌شود:
+سازوکارهای اجرایی شامل تحریم‌های تجاری و تعدیل تعرفه‌ها برای اطمینان از رعایت توافق‌نامه‌ها است.
 
-```{math}
-\mathbf{u} + \mathbf{v} = \begin{bmatrix} u_1 + v_1 \\ u_2 + v_2 \\ \vdots \\ u_n + v_n \end{bmatrix}
-```
+#### استانداردهای هماهنگ‌سازی
 
-## عملیات ماتریسی
+استانداردها باید در سطح کشورها هماهنگ شوند تا تجارت بدون مانع تسهیل گردد.
 
-ماتریس‌ها آرایه‌های مستطیلی از اعداد هستند که تبدیل‌های خطی را نمایش می‌دهند. آن‌ها ابزارهای بنیادی در مدل‌سازی اقتصادی و تحلیل داده هستند.
+##### مقررات ایمنی محصول
 
-یک ماتریس کلی $m \times n$ دارای شکل زیر است:
+مقررات ایمنی محصول تضمین می‌کند که کالاها الزامات حداقلی کیفیت و ایمنی را در سطح تمامی کشورهای عضو رعایت کنند.
 
-$$
-A = \begin{bmatrix}
-a_{11} & a_{12} & \cdots & a_{1n} \\
-a_{21} & a_{22} & \cdots & a_{2n} \\
-\vdots & \vdots & \ddots & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{bmatrix}
-$$
+##### استانداردهای زیست‌محیطی
 
-ضرب ماتریسی به ما امکان می‌دهد تبدیل‌های خطی را ترکیب کنیم. برای ماتریس‌های $A$ و $B$، حاصل‌ضرب $AB$ نشان‌دهنده اعمال تبدیل $B$ و سپس تبدیل $A$ است.
+استانداردهای زیست‌محیطی از وقوع «مسابقه به سمت پایین» جلوگیری می‌کنند، وضعیتی که در آن کشورها حفاظت‌های زیست‌محیطی را برای جذب کسب‌وکار کاهش می‌دهند.
 
-بیایید عملیات ماتریسی را با یک کاربرد اقتصادی نشان دهیم:
+### روابط تجاری دوجانبه
 
-```{code-cell} python
-# ایجاد یک ماتریس داده-ستانده ساده برای یک اقتصاد سه‌بخشی
-# بخش‌ها: کشاورزی، تولید، خدمات
-input_output = np.array([
-    [0.2, 0.3, 0.1],  # نهاده‌های کشاورزی
-    [0.3, 0.2, 0.2],  # نهاده‌های تولید
-    [0.1, 0.2, 0.3]   # نهاده‌های خدمات
-])
+روابط دوجانبه میان جفت کشورها اغلب ویژگی‌ها و توافق‌نامه‌های منحصربه‌فرد خود را دارند.
 
-# بردار تقاضای نهایی (به میلیارد)
-final_demand = np.array([100, 150, 200])
+## سلسله‌مراتب سیاست پولی
 
-# محاسبه تولید کل با استفاده از معکوس لئونتیف: x = (I - A)^{-1} * d
-I = np.eye(3)
-leontief_inverse = np.linalg.inv(I - input_output)
-total_output = leontief_inverse @ final_demand
+بانک‌های مرکزی در چارچوبی سلسله‌مراتبی از تصمیم‌گیری و اجرای سیاست فعالیت می‌کنند.
 
-print("ماتریس داده-ستانده:")
-print(input_output)
-print("\nمعکوس لئونتیف:")
-print(np.round(leontief_inverse, 3))
-print("\nتولید کل مورد نیاز (میلیارد):")
-print(np.round(total_output, 2))
-```
+### ساختار کمیته سیاست‌گذاری
 
-### کاربردها در اقتصاد
+کمیته‌های سیاست‌گذاری به‌طور منظم تشکیل جلسه می‌دهند تا نرخ‌های بهره و سایر ابزارهای سیاست پولی را تعیین کنند.
 
-مدل‌های اقتصادی اغلب از ماتریس‌ها برای نمایش موارد زیر استفاده می‌کنند:
-- روابط داده-ستانده در تولید
-- احتمالات انتقال در زنجیره‌های مارکوف
-- ماتریس‌های ضریب در سیستم‌های معادلات خطی
+#### رویه‌های رأی‌گیری
 
-معکوس لئونتیف $(I - A)^{-1}$ از اهمیت ویژه‌ای برخوردار است، که در آن $I$ ماتریس همانی و $A$ ماتریس ضرایب داده-ستانده است.
+اعضای کمیته به تغییرات سیاستی رأی می‌دهند، که در برخی سیستم‌ها وزن‌های رأی‌گیری متفاوتی دارد.
 
-## مقادیر ویژه و بردارهای ویژه
+##### نظرات مخالف
 
-مقادیر ویژه و بردارهای ویژه ویژگی‌های مهم تبدیل‌های خطی را آشکار می‌سازند. یک بردار ویژه $v$ از ماتریس $A$ رابطه زیر را برآورده می‌کند:
+اعضا می‌توانند در صورت مخالفت با تصمیم اکثریت، نظرات مخالف خود را ثبت کنند، که بینش‌های ارزشمندی درباره مناظرات سیاستی فراهم می‌کند.
 
-```{math}
-:label: eigenvalue-equation
-Av = \lambda v
-```
+##### شکل‌گیری اجماع
 
-که در آن $\lambda$ مقدار ویژه است. این معادله بنیادی در سراسر اقتصاد، از نظریه رشد تا تحلیل پایداری، ظاهر می‌شود.
+فرایندهای شکل‌گیری اجماع به همسوسازی دیدگاه‌ها پیش از رأی‌گیری رسمی کمک می‌کند و عدم قطعیت در بازارها را کاهش می‌دهد.
 
-برای یک ماتریس $n \times n$ به نام $A$، چندجمله‌ای مشخصه عبارت است از:
+#### جریان اطلاعات
 
-$$
-\det(A - \lambda I) = 0
-$$
+اطلاعات از شعبه‌های منطقه‌ای به کمیته سیاست‌گذاری مرکزی جریان می‌یابد و این امر تصمیم‌گیری آگاهانه را ممکن می‌سازد.
 
-حل این معادله مقادیر ویژه را به دست می‌دهد. بیایید مقادیر ویژه را برای یک ماتریس انتقال محاسبه کنیم:
+### کانال‌های اجرا
 
-```{code-cell} python
-# ایجاد یک ماتریس انتقال برای یک زنجیره مارکوف ساده
-# حالات: شاغل، بیکار
-transition_matrix = np.array([
-    [0.95, 0.05],  # شاغل -> (شاغل، بیکار)
-    [0.20, 0.80]   # بیکار -> (شاغل، بیکار)
-])
+پس از اتخاذ تصمیمات سیاستی، اجرا از طریق کانال‌های متعددی صورت می‌گیرد.
 
-# محاسبه مقادیر ویژه و بردارهای ویژه
-eigenvalues, eigenvectors = np.linalg.eig(transition_matrix)
+#### عملیات بازار باز
 
-print("ماتریس انتقال:")
-print(transition_matrix)
-print("\nمقادیر ویژه:")
-print(np.round(eigenvalues, 4))
-print("\nبردارهای ویژه:")
-print(np.round(eigenvectors, 4))
+عملیات بازار باز شامل خرید و فروش اوراق بهادار دولتی برای تأثیرگذاری بر عرضه پول است.
 
-# بردار ویژه متناظر با مقدار ویژه 1 توزیع حالت پایدار را می‌دهد
-steady_state_index = np.argmax(eigenvalues)
-steady_state = eigenvectors[:, steady_state_index]
-steady_state = steady_state / steady_state.sum()  # نرمال‌سازی
+##### معامله‌گران اصلی
 
-print("\nتوزیع حالت پایدار:")
-print(f"شاغل: {steady_state[0]:.2%}")
-print(f"بیکار: {steady_state[1]:.2%}")
-```
+معامله‌گران اصلی به‌عنوان واسطه میان بانک مرکزی و بازارهای مالی گسترده‌تر عمل می‌کنند.
 
-این مفاهیم برای تحلیل سیستم‌های اقتصادی پویا، مانند مدل‌های رشد و تحلیل پایداری، ضروری هستند.
+###### سازوکارهای حراج
 
-روش تکرار توانی را می‌توان برای یافتن مقدار ویژه غالب استفاده کرد:
+سازوکارهای حراج قیمت‌ها و مقادیر را در معاملات اوراق بهادار تعیین می‌کنند.
 
-$$
-\lambda_1 = \lim_{k \to \infty} \frac{\|A^k \mathbf{v}_0\|}{\|A^{k-1} \mathbf{v}_0\|}
-$$
+###### رویه‌های تسویه
+
+رویه‌های تسویه، تکمیل به‌موقع و دقیق معاملات اوراق بهادار را تضمین می‌کنند.
+
+##### الزامات ذخیره
+
+الزامات ذخیره حداقل ذخایری را که بانک‌ها باید نگهداری کنند مشخص می‌کند و بر ظرفیت وام‌دهی آن‌ها تأثیر می‌گذارد.
+
+## هماهنگی سیاست مالی
+
+سیاست مالی مستلزم هماهنگی میان سطوح متعدد دولت است.
+
+### فرایند بودجه ملی
+
+فرایند بودجه ملی شامل پیشنهادهای اجرایی، تصویب قانون‌گذاری، و نظارت بر اجرا است.
+
+#### جمع‌آوری درآمد
+
+جمع‌آوری مالیات از طریق کانال‌های متعدد و آژانس‌های دولتی صورت می‌گیرد.
+
+##### اداره مالیات بر درآمد
+
+سیستم‌های مالیات بر درآمد نیازمند نگهداری دقیق سوابق و نظارت بر انطباق هستند.
+
+###### معیارهای انتخاب حسابرسی
+
+حسابرسی‌ها بر اساس الگوریتم‌های ارزیابی ریسک و نمونه‌گیری تصادفی انتخاب می‌شوند.
+
+###### ساختارهای جریمه
+
+ساختارهای جریمه از عدم انطباق جلوگیری می‌کنند، در حالی که امکان بروز خطاها و اختلافات معقول را نیز فراهم می‌آورند.
+
+##### انطباق مالیات شرکتی
+
+مالیات‌ستانی شرکتی شامل قوانین پیچیده‌ای برای نهادهای چندملیتی است.
+
+#### تخصیص مخارج
+
+مخارج دولتی در میان برنامه‌ها و بخش‌های گوناگون تخصیص می‌یابد.
+
+### انتقالات میان‌دولتی
+
+انتقالات میان سطوح دولت (فدرال، ایالتی، محلی) تأمین مالی کافی برای خدمات عمومی را تضمین می‌کند.
+
+## خلاصه
+
+این چارچوب سلسله‌مراتبی نشان می‌دهد که چگونه نظام‌های اقتصادی در سطوح سازمانی متعدد، از نهادهای جهانی گرفته تا رویه‌های اجرایی خاص، عمل می‌کنند. درک این ساختارها برای تحلیل اثربخشی سیاست و طراحی نهادی ضروری است.
