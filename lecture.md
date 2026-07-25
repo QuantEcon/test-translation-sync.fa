@@ -7,15 +7,14 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
-translation:
-  title: مبانی جبر خطی
-  headings:
-    Vector Spaces: فضاهای برداری
-    Vector Spaces::Basic Properties: ویژگی‌های اساسی
-    Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
-    Matrix Operations: عملیات ماتریسی
-    Matrix Operations::Applications in Economics: کاربردها در اقتصاد
-    Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
+heading-map:
+  Linear Algebra Foundations: مبانی جبر خطی
+  Vector Spaces: فضاهای برداری
+  Vector Spaces::Basic Properties: ویژگی‌های اساسی
+  Vector Spaces::Basic Properties::Applications in Economics: کاربردها در اقتصاد
+  Matrix Operations: عملیات ماتریسی
+  Matrix Operations::Applications in Economics: کاربردها در اقتصاد
+  Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
 ---
 
 # مبانی جبر خطی

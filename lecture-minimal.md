@@ -7,11 +7,10 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
-translation:
-  title: مقدمه‌ای بر اقتصاد
-  headings:
-    Supply and Demand: عرضه و تقاضا
-    Economic Models: مدل‌های اقتصادی
+heading-map:
+  Introduction to Economics: مقدمه‌ای بر اقتصاد
+  Supply and Demand: عرضه و تقاضا
+  Economic Models: مدل‌های اقتصادی
 ---
 
 # مقدمه‌ای بر اقتصاد
