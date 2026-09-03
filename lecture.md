@@ -16,6 +16,7 @@ translation:
     Matrix Operations: عملیات ماتریسی
     Matrix Operations::Applications in Economics: کاربردها در اقتصاد
     Eigenvalues and Eigenvectors: مقادیر ویژه و بردارهای ویژه
+    Exercises: تمرین‌ها
 ---
 
 # مبانی جبر خطی
@@ -182,3 +183,36 @@ print(f"بیکار: {steady_state[1]:.2%}")
 $$
 \lambda_1 = \lim_{k \to \infty} \frac{\|A^k \mathbf{v}_0\|}{\|A^{k-1} \mathbf{v}_0\|}
 $$
+
+## تمرین‌ها
+
+```{exercise-start}
+:label: la_ex1
+```
+
+تابعی به نام `power_iterate(A, v0, k)` بنویسید که بردار $A^k \mathbf{v}_0$ را که به طول واحد نرمال‌سازی شده است، بازمی‌گرداند.
+
+```{hint}
+Use `np.linalg.norm` after each multiplication so the entries stay bounded.
+```
+
+```{exercise-end}
+```
+
+```{solution-start} la_ex1
+:class: dropdown
+```
+
+در اینجا یک راه‌حل ارائه شده است:
+
+```{code-cell} python3
+def power_iterate(A, v0, k):
+    v = np.asarray(v0, dtype=float)
+    for _ in range(k):
+        v = A @ v
+        v = v / np.linalg.norm(v)
+    return v
+```
+
+```{solution-end}
+```
